@@ -1,0 +1,54 @@
+{
+    "name": "devkind/simple-laravel-cacheable",
+    "description": "",
+    "keywords": [
+        "devkind",
+        "simple-laravel-cacheable"
+    ],
+    "homepage": "https://github.com/devkind/simple-laravel-cacheable",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "developers",
+            "email": "backend@devkind.com.au",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devkind\\SimpleLaravelCacheable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Devkind\\SimpleLaravelCacheable\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devkind\\SimpleLaravelCacheable\\SimpleLaravelCacheableServiceProvider"
+            ],
+            "aliases": {
+                "SimpleLaravelCacheable": "Devkind\\SimpleLaravelCacheable\\SimpleLaravelCacheableFacade"
+            }
+        }
+    }
+}
